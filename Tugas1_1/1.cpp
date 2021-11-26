@@ -1,28 +1,38 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main () {
-    // membuat variabel
-    char nama[20], tempatlahir[30];
-    float umur[2], bb[3];
+int main()
+{
+  string nama, lahir; 
+  int umur, berat;
+  
+  cout << "=====" << endl;
+  cout << "INPUT" << endl; 
+  cout << "=====" << endl;
 
-    printf("Masukkan Nama: ");
-    scanf("%s", &nama);
+  cout << "Masukkan Nama : ";
+  getline(cin, nama);
 
-    printf("Masukkan Umur: ");
-    scanf("%s", &umur);
+  cout << "Masukkan Umur : ";
+  cin >> umur;
 
-    printf("Masukkan Tempat Lahir: ");
-    scanf("%s", &tempatlahir);
-
-    printf("Masukkan Berat Badan: ");
-    scanf("%s", &bb);
-
-    printf("\n------------------------------\n");
-    printf("Nama anda %s\n", nama);
-    printf("Umur anda %s\n", umur);
-    printf("Tempat Lahir %s\n", tempatlahir);
-    printf("Berat Badan %s\n", bb);
-    
-    return 0;
+  cout << "Masukkan Tempat Lahir : ";
+  cin.ignore();
+  getline(cin, lahir);
+ 
+  cout << "Masukkan Berat Badan: ";
+  cin >> berat;
+ 
+  cout << endl;
+ 
+  cout << "======" << endl;
+  cout << "OUTPUT" << endl; 
+  cout << "======" << endl;
+  cout << "Nama anda " << nama  << endl;
+  cout << "Umur anda " << umur << endl;
+  cout << "Tempat Lahir " << lahir << endl;
+  cout << "Berat Badan " << berat << endl;
+ 
+ return 0;
 }
